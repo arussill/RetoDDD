@@ -26,16 +26,16 @@ public class Fabrica extends AggregateEvent<FabricaId> {
     /**
      * Constructor del Agregado Fabrica.
      *
-     * @param entityId the entity id
+     * @param fabricaId the entity id
      */
-    public Fabrica(FabricaId entityId, Nombre nombre, Direccion direccion, Telefono telefono) {
-        super(entityId);
+    public Fabrica(FabricaId fabricaId, Nombre nombre, Direccion direccion, Telefono telefono) {
+        super(fabricaId);
         appendChange(new FabricaCreada(nombre, direccion, telefono)).apply();
         subscribe(new FabricaEventChange(this));
     }
 
-    private Fabrica(FabricaId entityId){
-        super(entityId);
+    private Fabrica(FabricaId fabricaId){
+        super(fabricaId);
         subscribe(new FabricaEventChange(this));
     }
 
@@ -49,9 +49,9 @@ public class Fabrica extends AggregateEvent<FabricaId> {
     * Comportamientos
     */
 
-    public void agregarMolde(Forma forma, Tamano tamano, Cantidad cantidad){
+    public void agregarMolde(Forma forma, Medidas medidas, Cantidad cantidad){
         var moldeId = new MoldeId();
-        appendChange(new MoldeCreado(moldeId, forma, tamano, cantidad)).apply();
+        appendChange(new MoldeCreado(moldeId, forma, medidas, cantidad)).apply();
 
     }
 
@@ -65,8 +65,8 @@ public class Fabrica extends AggregateEvent<FabricaId> {
         appendChange(new InsumoAgregado(insumoId, tipo)).apply();
     }
 
-    public void cambiarDetallesDelMolde(MoldeId mentoriaId, Forma forma, Tamano tamano, Cantidad cantidad){
-        appendChange(new DetallesDelMoldeCambiados(mentoriaId, forma, tamano, cantidad)).apply();
+    public void cambiarDetallesDelMolde(MoldeId mentoriaId, Forma forma, Medidas medidas, Cantidad cantidad){
+        appendChange(new DetallesDelMoldeCambiados(mentoriaId, forma, medidas, cantidad)).apply();
     }
 
     //Propiedades

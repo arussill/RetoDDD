@@ -20,6 +20,10 @@ public class Telefono implements ValueObject<String> {
         }
     }
 
+    public static Telefono of(String telefono) {
+        return new Telefono(telefono);
+    }
+
     @Override
     public String value() {
         return null;

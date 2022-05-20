@@ -4,19 +4,19 @@ import co.com.sofka.domain.generic.DomainEvent;
 import co.com.sofkau.retoDDD.producion.fabrica.values.Cantidad;
 import co.com.sofkau.retoDDD.producion.fabrica.values.Forma;
 import co.com.sofkau.retoDDD.producion.fabrica.values.MoldeId;
-import co.com.sofkau.retoDDD.producion.fabrica.values.Tamano;
+import generic.values.Medidas;
 
 public class DetallesDelMoldeCambiados extends DomainEvent {
     private final MoldeId mentoriaId;
     private final Forma forma;
-    private final Tamano tamano;
+    private final Medidas medidas;
     private final Cantidad cantidad;
 
-    public DetallesDelMoldeCambiados(MoldeId mentoriaId, Forma forma, Tamano tamano, Cantidad cantidad) {
+    public DetallesDelMoldeCambiados(MoldeId mentoriaId, Forma forma, Medidas medidas, Cantidad cantidad) {
         super("co.com.sofkau.retoDDD.producion.DetallesDeInsumoCambiados");
         this.mentoriaId = mentoriaId;
         this.forma = forma;
-        this.tamano = tamano;
+        this.medidas = medidas;
         this.cantidad = cantidad;
     }
 
@@ -28,8 +28,8 @@ public class DetallesDelMoldeCambiados extends DomainEvent {
         return forma;
     }
 
-    public Tamano getTamano() {
-        return tamano;
+    public Medidas getTamano() {
+        return medidas;
     }
 
     public Cantidad getCantidad() {

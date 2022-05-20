@@ -1,15 +1,15 @@
-package co.com.sofkau.retoDDD.producion.fabrica.values;
+package generic.values;
 
 import co.com.sofka.domain.generic.ValueObject;
 
 import java.util.Objects;
 
-public class Tamano implements ValueObject<Tamano.Pros> {
+public class Medidas implements ValueObject<Medidas.Pros> {
 
     private final String largo;
     private final String ancho;
 
-    public Tamano( String largo, String ancho) {
+    public Medidas(String largo, String ancho) {
 
         this.largo = Objects.requireNonNull(largo);
         this.ancho = Objects.requireNonNull(ancho);
