@@ -15,7 +15,7 @@ public class Fecha implements ValueObject<Fecha.Pros> {
         this.hora = Objects.requireNonNull(hora);
         this.dia = Objects.requireNonNull(dia);
     }
-    
+
     @Override
     public Fecha.Pros value() {
         return new Pros() {
