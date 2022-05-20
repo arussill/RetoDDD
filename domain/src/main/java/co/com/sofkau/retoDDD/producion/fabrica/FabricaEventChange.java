@@ -1,8 +1,10 @@
 package co.com.sofkau.retoDDD.producion.fabrica;
 
 import co.com.sofka.domain.generic.EventChange;
+import co.com.sofkau.retoDDD.producion.fabrica.entitys.Maquinaria;
 import co.com.sofkau.retoDDD.producion.fabrica.entitys.Molde;
 import co.com.sofkau.retoDDD.producion.fabrica.events.FabricaCreada;
+import co.com.sofkau.retoDDD.producion.fabrica.events.MaquinariaAgregada;
 import co.com.sofkau.retoDDD.producion.fabrica.events.MoldeCreado;
 
 import java.util.HashSet;
@@ -23,6 +25,11 @@ public class FabricaEventChange extends EventChange {
             var molde = new Molde(moldeId, event.getForma(), event.getTamano(), event.getCantidad());
             //Validaciones
             fabrica.listaDeMoldes.add(molde);
+        });
+
+        apply((MaquinariaAgregada event) -> {
+            var maquinariaId = event.getMaquinariaId();
+            fabrica.maquinaria= new Maquinaria(maquinariaId, event.getTipo());
         });
     }
 }
