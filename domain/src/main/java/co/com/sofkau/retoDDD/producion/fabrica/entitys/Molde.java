@@ -8,6 +8,7 @@ import co.com.sofkau.retoDDD.producion.fabrica.values.Tamano;
 
 public class Molde extends Entity<MoldeId> {
 
+    private MoldeId moldeId;
     private Forma forma;
     private Tamano tamano;
     private Cantidad cantidad;
@@ -15,20 +16,25 @@ public class Molde extends Entity<MoldeId> {
     /**
      * Instantiates a new Entity.
      *
-     * @param entityId the entity id
+     * @param moldeId the entity id
      * @param forma
      * @param tamano
      * @param cantidad
      */
-    public Molde(MoldeId entityId, Forma forma, Tamano tamano, Cantidad cantidad) {
-        super(entityId);
+    public Molde(MoldeId moldeId, Forma forma, Tamano tamano, Cantidad cantidad) {
+        super(moldeId);
+        this.moldeId = moldeId;
         this.forma = forma;
         this.tamano = tamano;
         this.cantidad = cantidad;
     }
 
-    public void cambiarDetalles(MoldeId entityId, Forma forma, Tamano tamano, Cantidad cantidad){
-        //Validaciones
-        var molde = new Molde(entityId, forma, tamano, cantidad);
+    public void cambiarDetalles(MoldeId moldeId, Forma forma, Tamano tamano, Cantidad cantidad){
+        if(moldeId == this.moldeId){
+            this.moldeId = moldeId;
+            this.forma = forma;
+            this.tamano = tamano;
+            this.cantidad = cantidad;
+        }
     }
 }

@@ -4,10 +4,7 @@ import co.com.sofka.domain.generic.EventChange;
 import co.com.sofkau.retoDDD.producion.fabrica.entitys.Insumo;
 import co.com.sofkau.retoDDD.producion.fabrica.entitys.Maquinaria;
 import co.com.sofkau.retoDDD.producion.fabrica.entitys.Molde;
-import co.com.sofkau.retoDDD.producion.fabrica.events.FabricaCreada;
-import co.com.sofkau.retoDDD.producion.fabrica.events.InsumoAgregado;
-import co.com.sofkau.retoDDD.producion.fabrica.events.MaquinariaAgregada;
-import co.com.sofkau.retoDDD.producion.fabrica.events.MoldeCreado;
+import co.com.sofkau.retoDDD.producion.fabrica.events.*;
 
 import java.util.HashSet;
 
@@ -19,13 +16,12 @@ public class FabricaEventChange extends EventChange {
             fabrica.telefono = event.getTelefono();
             fabrica.maquinaria = null;
             fabrica.insumo = null;
-            fabrica.listaDeMoldes = new HashSet<>();
+
         });
 
         apply((MoldeCreado event)->{
             var moldeId = event.getMoldeId();
             var molde = new Molde(moldeId, event.getForma(), event.getTamano(), event.getCantidad());
-            //Validaciones
             fabrica.listaDeMoldes.add(molde);
         });
 
@@ -37,6 +33,16 @@ public class FabricaEventChange extends EventChange {
         apply((InsumoAgregado event)->{
             var insumoId = event.getInsumoId();
             fabrica.insumo= new Insumo(insumoId, event.getTipo());
+        });
+
+        apply((DetallesDelMoldeCambiados event)->{
+            var moldeId = event.getMentoriaId();
+            var forma = event.getForma();
+            var tamano = event.getTamano();
+            var cantidad = event.getCantidad();
+            fabrica.listaDeMoldes.forEach(molde->{
+                molde.cambiarDetalles(moldeId, forma, tamano, cantidad);
+            });
         });
     }
 }
