@@ -1,8 +1,8 @@
 package co.com.sofkau.retoDDD.producion.taller.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
+import co.com.sofkau.retoDDD.generic.values.Nombre;
 import co.com.sofkau.retoDDD.producion.taller.values.UtileriaId;
-import generic.values.Nombre;
 
 public class UtileriaAgregada extends DomainEvent {
     private final UtileriaId utileriaId;

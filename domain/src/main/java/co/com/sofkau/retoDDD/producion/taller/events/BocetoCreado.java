@@ -1,9 +1,10 @@
 package co.com.sofkau.retoDDD.producion.taller.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
+import co.com.sofkau.retoDDD.generic.values.Medidas;
 import co.com.sofkau.retoDDD.producion.taller.values.BocetoId;
 import co.com.sofkau.retoDDD.producion.taller.values.Descripcion;
-import generic.values.Medidas;
+
 
 public class BocetoCreado extends DomainEvent {
     private final BocetoId bocetoId;

@@ -1,9 +1,9 @@
 package co.com.sofkau.retoDDD.producion.taller.commands;
 
 import co.com.sofka.domain.generic.Command;
+import co.com.sofkau.retoDDD.generic.values.Medidas;
 import co.com.sofkau.retoDDD.producion.taller.values.BocetoId;
 import co.com.sofkau.retoDDD.producion.taller.values.Descripcion;
-import generic.values.Medidas;
 
 /**
  * Comando Crear Boceto

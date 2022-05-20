@@ -1,8 +1,8 @@
 package co.com.sofkau.retoDDD.producion.taller.commands;
 
 import co.com.sofka.domain.generic.Command;
+import co.com.sofkau.retoDDD.generic.values.Nombre;
 import co.com.sofkau.retoDDD.producion.taller.values.UtileriaId;
-import generic.values.Nombre;
 
 /**
  * Comando Agregar Utileria

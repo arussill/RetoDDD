@@ -2,18 +2,16 @@ package co.com.sofkau.retoDDD.producion.taller;
 
 import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.generic.DomainEvent;
-import co.com.sofkau.retoDDD.producion.fabrica.Fabrica;
-import co.com.sofkau.retoDDD.producion.fabrica.FabricaEventChange;
-import co.com.sofkau.retoDDD.producion.fabrica.values.FabricaId;
+import co.com.sofkau.retoDDD.generic.values.Direccion;
+import co.com.sofkau.retoDDD.generic.values.Medidas;
+import co.com.sofkau.retoDDD.generic.values.Nombre;
+import co.com.sofkau.retoDDD.generic.values.Telefono;
 import co.com.sofkau.retoDDD.producion.taller.entitys.Boceto;
 import co.com.sofkau.retoDDD.producion.taller.entitys.Disenador;
 import co.com.sofkau.retoDDD.producion.taller.entitys.Utileria;
 import co.com.sofkau.retoDDD.producion.taller.events.*;
 import co.com.sofkau.retoDDD.producion.taller.values.*;
-import generic.values.Direccion;
-import generic.values.Medidas;
-import generic.values.Nombre;
-import generic.values.Telefono;
+
 
 import java.util.List;
 

@@ -1,9 +1,9 @@
 package co.com.sofkau.retoDDD.producion.fabrica.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
+import co.com.sofkau.retoDDD.generic.values.Medidas;
 import co.com.sofkau.retoDDD.producion.fabrica.values.Cantidad;
 import co.com.sofkau.retoDDD.producion.fabrica.values.Forma;
-import generic.values.Medidas;
 import co.com.sofkau.retoDDD.producion.fabrica.values.MoldeId;
 
 public class MoldeCreado extends DomainEvent {

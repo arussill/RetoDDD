@@ -1,9 +1,9 @@
 package co.com.sofkau.retoDDD.producion.coleccion.entitys;
 
 import co.com.sofka.domain.generic.Entity;
+import co.com.sofkau.retoDDD.generic.values.Fecha;
 import co.com.sofkau.retoDDD.producion.coleccion.values.PruebaId;
 import co.com.sofkau.retoDDD.producion.coleccion.values.Resultado;
-import generic.values.Fecha;
 
 public class Prueba extends Entity<PruebaId> {
     protected PruebaId pruebaId;

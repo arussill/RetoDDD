@@ -1,9 +1,9 @@
 package co.com.sofkau.retoDDD.producion.coleccion.commands;
 
 import co.com.sofka.domain.generic.Command;
+import co.com.sofkau.retoDDD.generic.values.Fecha;
 import co.com.sofkau.retoDDD.producion.coleccion.values.PruebaId;
 import co.com.sofkau.retoDDD.producion.coleccion.values.Resultado;
-import generic.values.Fecha;
 
 public class RealizarPrueba extends Command {
     private final PruebaId pruebaId;

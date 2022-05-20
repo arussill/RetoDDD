@@ -1,8 +1,8 @@
 package co.com.sofkau.retoDDD.producion.fabrica.entitys;
 
 import co.com.sofka.domain.generic.Entity;
+import co.com.sofkau.retoDDD.generic.values.Tipo;
 import co.com.sofkau.retoDDD.producion.fabrica.values.InsumoId;
-import generic.values.Tipo;
 
 public class Insumo extends Entity<InsumoId> {
     protected InsumoId insumoId;

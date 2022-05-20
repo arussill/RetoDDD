@@ -1,9 +1,10 @@
 package co.com.sofkau.retoDDD.producion.taller.commands;
 
 import co.com.sofka.domain.generic.Command;
+import co.com.sofkau.retoDDD.generic.values.Nombre;
+import co.com.sofkau.retoDDD.generic.values.Telefono;
 import co.com.sofkau.retoDDD.producion.taller.values.DisenadorId;
-import generic.values.Nombre;
-import generic.values.Telefono;
+
 
 /**
  * Comando Agregar Diseñador

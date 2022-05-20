@@ -6,7 +6,6 @@ import co.com.sofkau.retoDDD.producion.fabrica.entitys.Maquinaria;
 import co.com.sofkau.retoDDD.producion.fabrica.entitys.Molde;
 import co.com.sofkau.retoDDD.producion.fabrica.events.*;
 
-import java.util.HashSet;
 
 public class FabricaEventChange extends EventChange {
     public FabricaEventChange(Fabrica fabrica) {

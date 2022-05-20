@@ -1,12 +1,10 @@
 package co.com.sofkau.retoDDD.producion.taller.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import co.com.sofkau.retoDDD.producion.taller.values.BocetoId;
-import co.com.sofkau.retoDDD.producion.taller.values.DisenadorId;
-import co.com.sofkau.retoDDD.producion.taller.values.UtileriaId;
-import generic.values.Direccion;
-import generic.values.Nombre;
-import generic.values.Telefono;
+import co.com.sofkau.retoDDD.generic.values.Direccion;
+import co.com.sofkau.retoDDD.generic.values.Nombre;
+import co.com.sofkau.retoDDD.generic.values.Telefono;
+
 
 public class TallerCreado extends DomainEvent {
 
@@ -16,7 +14,7 @@ public class TallerCreado extends DomainEvent {
 
 
     public TallerCreado(Nombre nombre, Direccion direccion, Telefono telefono) {
-        super("co.com.sofkau.retoDDD.TallerCreado");
+        super("co.com.sofkau.retoDDD.producion.TallerCreado");
         this.nombre = nombre;
         this.direccion = direccion;
         this.telefono = telefono;

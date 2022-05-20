@@ -1,9 +1,10 @@
 package co.com.sofkau.retoDDD.producion.taller.entitys;
 
 import co.com.sofka.domain.generic.Entity;
+import co.com.sofkau.retoDDD.generic.values.Nombre;
+import co.com.sofkau.retoDDD.generic.values.Telefono;
 import co.com.sofkau.retoDDD.producion.taller.values.DisenadorId;
-import generic.values.Nombre;
-import generic.values.Telefono;
+
 
 public class Disenador extends Entity<DisenadorId> {
     protected DisenadorId disenadorId;

@@ -1,11 +1,11 @@
 package co.com.sofkau.retoDDD.producion.coleccion.entitys;
 
 import co.com.sofka.domain.generic.Entity;
+import co.com.sofkau.retoDDD.generic.values.Nombre;
 import co.com.sofkau.retoDDD.producion.coleccion.values.Categoria;
 import co.com.sofkau.retoDDD.producion.coleccion.values.Color;
 import co.com.sofkau.retoDDD.producion.coleccion.values.ProductoId;
 import co.com.sofkau.retoDDD.producion.coleccion.values.Talla;
-import generic.values.Nombre;
 
 public class Producto extends Entity<ProductoId> {
     protected ProductoId productoId;

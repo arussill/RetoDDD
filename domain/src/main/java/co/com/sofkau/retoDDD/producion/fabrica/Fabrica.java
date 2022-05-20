@@ -2,12 +2,13 @@ package co.com.sofkau.retoDDD.producion.fabrica;
 
 import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.generic.DomainEvent;
+import co.com.sofkau.retoDDD.generic.values.*;
 import co.com.sofkau.retoDDD.producion.coleccion.values.ColeccionId;
 import co.com.sofkau.retoDDD.producion.fabrica.entitys.*;
 import co.com.sofkau.retoDDD.producion.fabrica.events.*;
 import co.com.sofkau.retoDDD.producion.fabrica.values.*;
 import co.com.sofkau.retoDDD.producion.taller.values.TallerId;
-import generic.values.*;
+
 
 import java.util.List;
 import java.util.Set;

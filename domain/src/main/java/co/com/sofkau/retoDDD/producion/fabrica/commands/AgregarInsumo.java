@@ -1,8 +1,8 @@
 package co.com.sofkau.retoDDD.producion.fabrica.commands;
 
 import co.com.sofka.domain.generic.Command;
+import co.com.sofkau.retoDDD.generic.values.Tipo;
 import co.com.sofkau.retoDDD.producion.fabrica.values.InsumoId;
-import generic.values.Tipo;
 
 /**
  * Comando Agregar Insumo

@@ -1,10 +1,10 @@
 package co.com.sofkau.retoDDD.producion.fabrica.commands;
 
 import co.com.sofka.domain.generic.Command;
+import co.com.sofkau.retoDDD.generic.values.Medidas;
 import co.com.sofkau.retoDDD.producion.fabrica.values.Cantidad;
 import co.com.sofkau.retoDDD.producion.fabrica.values.Forma;
 import co.com.sofkau.retoDDD.producion.fabrica.values.MoldeId;
-import generic.values.Medidas;
 /**
  * Comando Agregar Molde
  *

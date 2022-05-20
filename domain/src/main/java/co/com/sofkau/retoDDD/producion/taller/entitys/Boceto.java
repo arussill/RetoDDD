@@ -1,9 +1,9 @@
 package co.com.sofkau.retoDDD.producion.taller.entitys;
 
 import co.com.sofka.domain.generic.Entity;
+import co.com.sofkau.retoDDD.generic.values.Medidas;
 import co.com.sofkau.retoDDD.producion.taller.values.BocetoId;
 import co.com.sofkau.retoDDD.producion.taller.values.Descripcion;
-import generic.values.Medidas;
 
 public class Boceto extends Entity<BocetoId> {
     protected BocetoId bocetoId;

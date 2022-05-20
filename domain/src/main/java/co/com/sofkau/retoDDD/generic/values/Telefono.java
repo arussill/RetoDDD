@@ -1,4 +1,4 @@
-package generic.values;
+package co.com.sofkau.retoDDD.generic.values;
 
 import co.com.sofka.domain.generic.ValueObject;
 

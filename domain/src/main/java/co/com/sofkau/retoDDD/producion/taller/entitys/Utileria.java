@@ -1,8 +1,8 @@
 package co.com.sofkau.retoDDD.producion.taller.entitys;
 
 import co.com.sofka.domain.generic.Entity;
+import co.com.sofkau.retoDDD.generic.values.Nombre;
 import co.com.sofkau.retoDDD.producion.taller.values.UtileriaId;
-import generic.values.Nombre;
 
 public class Utileria extends Entity<UtileriaId> {
     protected UtileriaId utileriaId;

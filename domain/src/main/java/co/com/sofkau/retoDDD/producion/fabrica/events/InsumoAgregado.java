@@ -1,8 +1,8 @@
 package co.com.sofkau.retoDDD.producion.fabrica.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
+import co.com.sofkau.retoDDD.generic.values.Tipo;
 import co.com.sofkau.retoDDD.producion.fabrica.values.InsumoId;
-import generic.values.Tipo;
 
 public class InsumoAgregado extends DomainEvent {
     private final InsumoId insumoId;

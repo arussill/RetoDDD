@@ -2,14 +2,15 @@ package co.com.sofkau.retoDDD.producion.coleccion;
 
 import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.generic.DomainEvent;
+import co.com.sofkau.retoDDD.generic.values.Fecha;
+import co.com.sofkau.retoDDD.generic.values.Nombre;
+import co.com.sofkau.retoDDD.generic.values.Telefono;
 import co.com.sofkau.retoDDD.producion.coleccion.entitys.Personal;
 import co.com.sofkau.retoDDD.producion.coleccion.entitys.Producto;
 import co.com.sofkau.retoDDD.producion.coleccion.entitys.Prueba;
 import co.com.sofkau.retoDDD.producion.coleccion.events.*;
 import co.com.sofkau.retoDDD.producion.coleccion.values.*;;
-import generic.values.Fecha;
-import generic.values.Nombre;
-import generic.values.Telefono;
+
 
 import java.util.List;
 

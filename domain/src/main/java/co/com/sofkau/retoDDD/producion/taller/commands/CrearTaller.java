@@ -1,10 +1,11 @@
 package co.com.sofkau.retoDDD.producion.taller.commands;
 
 import co.com.sofka.domain.generic.Command;
+import co.com.sofkau.retoDDD.generic.values.Direccion;
+import co.com.sofkau.retoDDD.generic.values.Nombre;
+import co.com.sofkau.retoDDD.generic.values.Telefono;
 import co.com.sofkau.retoDDD.producion.taller.values.TallerId;
-import generic.values.Direccion;
-import generic.values.Nombre;
-import generic.values.Telefono;
+
 
 /**
  * Comando Crear Taller
