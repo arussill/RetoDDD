@@ -1,9 +1,9 @@
 package co.com.sofkau.retoDDD.producion.fabrica.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import co.com.sofkau.retoDDD.producion.generic.values.Direccion;
-import co.com.sofkau.retoDDD.producion.generic.values.Nombre;
-import co.com.sofkau.retoDDD.producion.generic.values.Telefono;
+import generic.values.Direccion;
+import generic.values.Nombre;
+import generic.values.Telefono;
 
 public class FabricaCreada extends DomainEvent {
 

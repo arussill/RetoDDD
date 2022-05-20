@@ -1,9 +1,9 @@
 package co.com.sofkau.retoDDD.producion.taller;
 
 import co.com.sofka.domain.generic.AggregateEvent;
-import co.com.sofkau.retoDDD.producion.generic.values.Direccion;
-import co.com.sofkau.retoDDD.producion.generic.values.Nombre;
-import co.com.sofkau.retoDDD.producion.generic.values.Telefono;
+import generic.values.Direccion;
+import generic.values.Nombre;
+import generic.values.Telefono;
 
 public class Taller extends AggregateEvent<TallerId> {
 

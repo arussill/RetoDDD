@@ -6,9 +6,9 @@ import co.com.sofkau.retoDDD.producion.fabrica.entitys.Maquinaria;
 import co.com.sofkau.retoDDD.producion.fabrica.entitys.Molde;
 import co.com.sofkau.retoDDD.producion.fabrica.events.FabricaCreada;
 import co.com.sofkau.retoDDD.producion.fabrica.values.*;
-import co.com.sofkau.retoDDD.producion.generic.values.Direccion;
-import co.com.sofkau.retoDDD.producion.generic.values.Nombre;
-import co.com.sofkau.retoDDD.producion.generic.values.Telefono;
+import generic.values.Direccion;
+import generic.values.Nombre;
+import generic.values.Telefono;
 
 import java.util.Set;
 
