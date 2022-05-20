@@ -13,9 +13,7 @@ public class TallerCreado extends DomainEvent {
     private final Nombre nombre;
     private final Direccion direccion;
     private final Telefono telefono;
-    private final UtileriaId utileriaId;
-    private final DisenadorId disenadorId;
-    private final BocetoId bocetoId;
+
 
     public TallerCreado(Nombre nombre, Direccion direccion, Telefono telefono) {
         super("co.com.sofkau.retoDDD.TallerCreado");
