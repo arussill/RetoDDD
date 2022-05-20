@@ -21,5 +21,6 @@ public class Taller extends AggregateEvent<TallerId> {
     public Taller(TallerId entityId, Nombre nombre, Direccion direccion, Telefono telefono) {
         super(entityId);
         appendChange(new TallerCreado(nombre, direccion, telefono)).apply();
+        subscribe(new TallerEventChange(this));
     }
 }
