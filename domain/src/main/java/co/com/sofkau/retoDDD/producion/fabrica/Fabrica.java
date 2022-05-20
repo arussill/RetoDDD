@@ -4,10 +4,12 @@ import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofkau.retoDDD.producion.coleccion.values.ColeccionId;
 import co.com.sofkau.retoDDD.producion.fabrica.entitys.*;
 import co.com.sofkau.retoDDD.producion.fabrica.events.FabricaCreada;
+import co.com.sofkau.retoDDD.producion.fabrica.events.MaquinariaAgregada;
 import co.com.sofkau.retoDDD.producion.fabrica.events.MoldeCreado;
 import co.com.sofkau.retoDDD.producion.fabrica.values.*;
 import co.com.sofkau.retoDDD.producion.taller.values.TallerId;
 import generic.values.Direccion;
+import generic.values.Fecha;
 import generic.values.Nombre;
 import generic.values.Telefono;
 
@@ -39,6 +41,11 @@ public class Fabrica extends AggregateEvent<FabricaId> {
         var moldeId = new MoldeId();
         appendChange(new MoldeCreado(moldeId, forma, tamano, cantidad)).apply();
 
+    }
+
+    public void agregarMaquinaria(Tipo tipo){
+        var maquinariaId = new MaquinariaId();
+        appendChange(new MaquinariaAgregada(maquinariaId, tipo));
     }
 }
 
