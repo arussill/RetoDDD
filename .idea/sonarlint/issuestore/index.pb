@@ -9,5 +9,3 @@ Udomain/src/main/java/co/com/sofkau/retoDDD/producion/coleccion/values/ProductoI
 Sdomain/src/main/java/co/com/sofkau/retoDDD/producion/coleccion/values/PruebaId.java,1\4\14899a3563358a81f82d311328d0d9096dd2d353
 „
 Tdomain/src/main/java/co/com/sofkau/retoDDD/producion/taller/events/TallerCreado.java,b\7\b74372f9e280200438d18e1e5caa773d4bab6a80
-Š
-Zdomain/src/main/java/co/com/sofkau/retoDDD/producion/coleccion/events/ColeccionCreada.java,8\2\82356d77aec3a861151aee0f9f14cb8486b288e5
