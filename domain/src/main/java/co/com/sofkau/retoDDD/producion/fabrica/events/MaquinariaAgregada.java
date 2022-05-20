@@ -1,9 +1,8 @@
 package co.com.sofkau.retoDDD.producion.fabrica.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import co.com.sofkau.retoDDD.producion.fabrica.entitys.Maquinaria;
 import co.com.sofkau.retoDDD.producion.fabrica.values.MaquinariaId;
-import co.com.sofkau.retoDDD.producion.fabrica.values.Tipo;
+import generic.values.Tipo;
 
 public class MaquinariaAgregada extends DomainEvent {
 

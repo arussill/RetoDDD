@@ -2,7 +2,7 @@ package co.com.sofkau.retoDDD.producion.fabrica.entitys;
 
 import  co.com.sofka.domain.generic.Entity;
 import co.com.sofkau.retoDDD.producion.fabrica.values.MaquinariaId;
-import co.com.sofkau.retoDDD.producion.fabrica.values.Tipo;
+import generic.values.Tipo;
 
 public class Maquinaria extends Entity<MaquinariaId> {
     private final Tipo tipo;
