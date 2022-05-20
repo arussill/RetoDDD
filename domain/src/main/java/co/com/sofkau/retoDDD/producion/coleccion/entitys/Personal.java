@@ -23,4 +23,10 @@ public class Personal extends Entity<PersonalId> {
         this.nombre = nombre;
         this.telefono = telefono;
     }
+
+    public void cambiarInformacion(PersonalId personalId, Nombre nombre, Telefono telefono){
+        this.personalId = PersonalId.of(Personal.this.personalId.value());
+        this.nombre = Nombre.of(nombre.value());
+        this.telefono = telefono.of(telefono.value());
+    }
 }

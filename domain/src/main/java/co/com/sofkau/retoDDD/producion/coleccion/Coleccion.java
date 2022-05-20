@@ -5,10 +5,7 @@ import co.com.sofka.domain.generic.DomainEvent;
 import co.com.sofkau.retoDDD.producion.coleccion.entitys.Personal;
 import co.com.sofkau.retoDDD.producion.coleccion.entitys.Producto;
 import co.com.sofkau.retoDDD.producion.coleccion.entitys.Prueba;
-import co.com.sofkau.retoDDD.producion.coleccion.events.ColeccionCreada;
-import co.com.sofkau.retoDDD.producion.coleccion.events.PersonalAgregado;
-import co.com.sofkau.retoDDD.producion.coleccion.events.ProductoAgregado;
-import co.com.sofkau.retoDDD.producion.coleccion.events.PruebaRealizada;
+import co.com.sofkau.retoDDD.producion.coleccion.events.*;
 import co.com.sofkau.retoDDD.producion.coleccion.values.*;;
 import generic.values.Fecha;
 import generic.values.Nombre;
@@ -61,6 +58,10 @@ public class Coleccion extends AggregateEvent<ColeccionId> {
     public void agregarProducto(Nombre nombre, Color color, Talla talla, Categoria categoria){
         var porductoId = new ProductoId();
         appendChange(new ProductoAgregado(porductoId, nombre, color, talla, categoria)).apply();
+    }
+
+    public void cambiarPersonal(PersonalId personalId, Nombre nombre, Telefono telefono){
+        appendChange(new PersonalCambiado(personalId,nombre,telefono)).apply();
     }
 
     //Propiedades
