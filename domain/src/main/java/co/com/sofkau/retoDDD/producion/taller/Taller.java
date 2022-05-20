@@ -1,6 +1,8 @@
 package co.com.sofkau.retoDDD.producion.taller;
 
 import co.com.sofka.domain.generic.AggregateEvent;
+import co.com.sofkau.retoDDD.producion.taller.events.TallerCreado;
+import co.com.sofkau.retoDDD.producion.taller.values.TallerId;
 import generic.values.Direccion;
 import generic.values.Nombre;
 import generic.values.Telefono;
