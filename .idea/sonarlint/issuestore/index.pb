@@ -31,10 +31,6 @@ Tdomain/src/main/java/co/com/sofkau/retoDDD/producion/coleccion/values/Categoria
 Udomain/src/main/java/co/com/sofkau/retoDDD/producion/coleccion/values/ProductoId.java,8\e\8e76eca0d3ac314d878979b262a76e589b8c9dfa
 ƒ
 Sdomain/src/main/java/co/com/sofkau/retoDDD/producion/coleccion/values/PruebaId.java,1\4\14899a3563358a81f82d311328d0d9096dd2d353
-„
-Tdomain/src/main/java/co/com/sofkau/retoDDD/producion/coleccion/entitys/Producto.java,c\7\c74ba021eb16a8dff8a07cc12b5cef6a3611c25f
-„
-Tdomain/src/main/java/co/com/sofkau/retoDDD/producion/coleccion/entitys/Personal.java,c\1\c10d1b3e581392b7a2a2a5be8089312739649275
 …
 Udomain/src/main/java/co/com/sofkau/retoDDD/producion/coleccion/values/PersonalId.java,3\4\34ab155f22cd5c3f2812f8f004db4c6955568ff2
 w
@@ -45,7 +41,3 @@ Tdomain/src/main/java/co/com/sofkau/retoDDD/producion/taller/events/TallerCreado
 Vdomain/src/main/java/co/com/sofkau/retoDDD/producion/coleccion/values/ColeccionId.java,f\8\f87c95a4e637abbe23249d88ce65cd6c8458952c
 Š
 Zdomain/src/main/java/co/com/sofkau/retoDDD/producion/coleccion/events/ColeccionCreada.java,8\2\82356d77aec3a861151aee0f9f14cb8486b288e5
-‹
-[domain/src/main/java/co/com/sofkau/retoDDD/producion/fabrica/events/MaquinariaAgregada.java,d\d\ddac25cbcee0f294dcb8e9247a8e53b7e06c3be5
-‡
-Wdomain/src/main/java/co/com/sofkau/retoDDD/producion/fabrica/events/InsumoAgregado.java,5\2\522e9aa05a56eb00c193bf02f413339726550a60

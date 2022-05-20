@@ -5,8 +5,8 @@ import co.com.sofkau.retoDDD.producion.fabrica.values.MaquinariaId;
 import generic.values.Tipo;
 
 public class Maquinaria extends Entity<MaquinariaId> {
-    private final MaquinariaId maquinariaId;
-    private final Tipo tipo;
+    protected MaquinariaId maquinariaId;
+    protected Tipo tipo;
 
     /**
      * Instantiates a new Entity.

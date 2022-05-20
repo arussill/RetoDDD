@@ -9,7 +9,7 @@ public class InsumoAgregado extends DomainEvent {
     private final Tipo tipo;
 
     public InsumoAgregado(InsumoId insumoId, Tipo tipo) {
-        super("co.com.sofkau.retoDDD.producion.fabrica.InsumoAgregado");
+        super("co.com.sofkau.retoDDD.producion.InsumoAgregado");
         this.insumoId = insumoId;
         this.tipo = tipo;
     }

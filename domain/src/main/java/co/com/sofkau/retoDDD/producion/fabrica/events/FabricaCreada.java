@@ -12,7 +12,7 @@ public class FabricaCreada extends DomainEvent {
     private final Telefono telefono;
 
     public FabricaCreada(Nombre nombre, Direccion direccion, Telefono telefono) {
-        super("co.com.sofkau.retoDDD.FabricaCreada");
+        super("co.com.sofkau.retoDDD.producion.FabricaCreada");
         this.nombre = nombre;
         this.direccion = direccion;
         this.telefono = telefono;

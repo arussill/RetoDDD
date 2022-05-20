@@ -13,7 +13,7 @@ public class DetallesDelMoldeCambiados extends DomainEvent {
     private final Cantidad cantidad;
 
     public DetallesDelMoldeCambiados(MoldeId mentoriaId, Forma forma, Tamano tamano, Cantidad cantidad) {
-        super("co.com.sofkau.retoDDD.producion.fabrica.DetallesDeInsumoCambiados");
+        super("co.com.sofkau.retoDDD.producion.DetallesDeInsumoCambiados");
         this.mentoriaId = mentoriaId;
         this.forma = forma;
         this.tamano = tamano;

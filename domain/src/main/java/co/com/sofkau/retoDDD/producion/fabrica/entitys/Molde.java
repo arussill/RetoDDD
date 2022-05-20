@@ -8,10 +8,10 @@ import co.com.sofkau.retoDDD.producion.fabrica.values.Tamano;
 
 public class Molde extends Entity<MoldeId> {
 
-    private MoldeId moldeId;
-    private Forma forma;
-    private Tamano tamano;
-    private Cantidad cantidad;
+    protected MoldeId moldeId;
+    protected Forma forma;
+    protected Tamano tamano;
+    protected Cantidad cantidad;
 
     /**
      * Instantiates a new Entity.

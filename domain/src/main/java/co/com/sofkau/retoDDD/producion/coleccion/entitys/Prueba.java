@@ -6,9 +6,9 @@ import co.com.sofkau.retoDDD.producion.coleccion.values.Resultado;
 import generic.values.Fecha;
 
 public class Prueba extends Entity<PruebaId> {
-    private PruebaId pruebaId;
-    private Fecha fecha;
-    private Resultado resultado;
+    protected PruebaId pruebaId;
+    protected Fecha fecha;
+    protected Resultado resultado;
 
     /**
      * Instantiates a new Entity.

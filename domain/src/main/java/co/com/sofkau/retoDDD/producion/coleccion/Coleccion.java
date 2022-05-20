@@ -6,15 +6,13 @@ import co.com.sofkau.retoDDD.producion.coleccion.entitys.Personal;
 import co.com.sofkau.retoDDD.producion.coleccion.entitys.Producto;
 import co.com.sofkau.retoDDD.producion.coleccion.entitys.Prueba;
 import co.com.sofkau.retoDDD.producion.coleccion.events.ColeccionCreada;
+import co.com.sofkau.retoDDD.producion.coleccion.events.PersonalAgregado;
+import co.com.sofkau.retoDDD.producion.coleccion.events.ProductoAgregado;
 import co.com.sofkau.retoDDD.producion.coleccion.events.PruebaRealizada;
-import co.com.sofkau.retoDDD.producion.coleccion.values.ColeccionId;
-import co.com.sofkau.retoDDD.producion.coleccion.values.PruebaId;
-import co.com.sofkau.retoDDD.producion.coleccion.values.Resultado;
-import co.com.sofkau.retoDDD.producion.fabrica.Fabrica;
-import co.com.sofkau.retoDDD.producion.fabrica.FabricaEventChange;
-import co.com.sofkau.retoDDD.producion.fabrica.values.FabricaId;
+import co.com.sofkau.retoDDD.producion.coleccion.values.*;;
 import generic.values.Fecha;
 import generic.values.Nombre;
+import generic.values.Telefono;
 
 import java.util.List;
 
@@ -53,5 +51,37 @@ public class Coleccion extends AggregateEvent<ColeccionId> {
     public void realizarPrueba(Fecha fecha, Resultado resultado){
         var pruebaId = new PruebaId();
         appendChange(new PruebaRealizada(pruebaId, fecha, resultado)).apply();
+    }
+
+    public void agregarPersonal(Nombre nombre, Telefono telefono){
+        var personalId = new PersonalId();
+        appendChange(new PersonalAgregado(personalId, nombre, telefono)).apply();
+    }
+
+    public void agregarProducto(Nombre nombre, Color color, Talla talla, Categoria categoria){
+        var porductoId = new ProductoId();
+        appendChange(new ProductoAgregado(porductoId, nombre, color, talla, categoria)).apply();
+    }
+
+    //Propiedades
+
+    public Nombre Nombre() {
+        return nombre;
+    }
+
+    public Fecha Fecha() {
+        return fecha;
+    }
+
+    public Prueba Prueba() {
+        return prueba;
+    }
+
+    public Personal Personal() {
+        return personal;
+    }
+
+    public Producto Producto() {
+        return producto;
     }
 }
