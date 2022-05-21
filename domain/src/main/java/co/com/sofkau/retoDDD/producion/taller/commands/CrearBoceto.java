@@ -4,6 +4,7 @@ import co.com.sofka.domain.generic.Command;
 import co.com.sofkau.retoDDD.generic.values.Medidas;
 import co.com.sofkau.retoDDD.producion.taller.values.BocetoId;
 import co.com.sofkau.retoDDD.producion.taller.values.Descripcion;
+import co.com.sofkau.retoDDD.producion.taller.values.TallerId;
 
 /**
  * Comando Crear Boceto
@@ -14,11 +15,13 @@ import co.com.sofkau.retoDDD.producion.taller.values.Descripcion;
  */
 
 public class CrearBoceto extends Command {
+    private final TallerId tallerId;
     private final BocetoId bocetoId;
     private final Medidas medidas;
     private final Descripcion descripcion;
 
-    public CrearBoceto(BocetoId bocetoId, Medidas medidas, Descripcion descripcion) {
+    public CrearBoceto(TallerId tallerId, BocetoId bocetoId, Medidas medidas, Descripcion descripcion) {
+        this.tallerId = tallerId;
         this.bocetoId = bocetoId;
         this.medidas = medidas;
         this.descripcion = descripcion;
@@ -34,5 +37,9 @@ public class CrearBoceto extends Command {
 
     public Descripcion getDescripcion() {
         return descripcion;
+    }
+
+    public TallerId getTallerId() {
+        return tallerId;
     }
 }
