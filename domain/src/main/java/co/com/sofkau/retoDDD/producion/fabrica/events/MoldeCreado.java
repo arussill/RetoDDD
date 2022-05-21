@@ -28,7 +28,7 @@ public class MoldeCreado extends DomainEvent {
         return forma;
     }
 
-    public Medidas getTamano() {
+    public Medidas getMedidas() {
         return medidas;
     }
 

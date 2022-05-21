@@ -2,6 +2,7 @@ package co.com.sofkau.retoDDD.producion.fabrica.commands;
 
 import co.com.sofka.domain.generic.Command;
 import co.com.sofkau.retoDDD.generic.values.Tipo;
+import co.com.sofkau.retoDDD.producion.fabrica.values.FabricaId;
 import co.com.sofkau.retoDDD.producion.fabrica.values.MaquinariaId;
 
 /**
@@ -13,10 +14,13 @@ import co.com.sofkau.retoDDD.producion.fabrica.values.MaquinariaId;
  */
 
 public class AgregarMaquinaria extends Command {
+
+    private final FabricaId fabricaId;
     private final MaquinariaId maquinariaId;
     private final Tipo tipo;
 
-    public AgregarMaquinaria(MaquinariaId maquinariaId, Tipo tipo) {
+    public AgregarMaquinaria(FabricaId fabricaId, MaquinariaId maquinariaId, Tipo tipo) {
+        this.fabricaId = fabricaId;
         this.maquinariaId = maquinariaId;
         this.tipo = tipo;
     }
@@ -27,5 +31,9 @@ public class AgregarMaquinaria extends Command {
 
     public Tipo getTipo() {
         return tipo;
+    }
+
+    public FabricaId getFabricaId() {
+        return fabricaId;
     }
 }

@@ -20,7 +20,7 @@ public class FabricaEventChange extends EventChange {
 
         apply((MoldeCreado event)->{
             var moldeId = event.getMoldeId();
-            var molde = new Molde(moldeId, event.getForma(), event.getTamano(), event.getCantidad());
+            var molde = new Molde(moldeId, event.getForma(), event.getMedidas(), event.getCantidad());
             fabrica.listaDeMoldes.add(molde);
         });
 
