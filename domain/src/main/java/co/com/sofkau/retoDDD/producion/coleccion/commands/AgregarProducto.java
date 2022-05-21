@@ -1,10 +1,8 @@
 package co.com.sofkau.retoDDD.producion.coleccion.commands;
 
 import co.com.sofka.domain.generic.Command;
-import co.com.sofkau.retoDDD.producion.coleccion.values.Categoria;
-import co.com.sofkau.retoDDD.producion.coleccion.values.Color;
-import co.com.sofkau.retoDDD.producion.coleccion.values.ProductoId;
-import co.com.sofkau.retoDDD.producion.coleccion.values.Talla;
+import co.com.sofkau.retoDDD.generic.values.Nombre;
+import co.com.sofkau.retoDDD.producion.coleccion.values.*;
 
 /**
  * Comando Agregar producto
@@ -19,12 +17,16 @@ public class AgregarProducto extends Command {
     private final Talla talla;
     private final Color color;
     private final Categoria categoria;
+    private final Nombre nombre;
+    private final ColeccionId coleccionId;
 
-    public AgregarProducto(ProductoId productoId, Talla talla, Color color, Categoria categoria) {
+    public AgregarProducto(ProductoId productoId, Talla talla, Color color, Categoria categoria, Nombre nombre, ColeccionId coleccionId) {
         this.productoId = productoId;
         this.talla = talla;
         this.color = color;
         this.categoria = categoria;
+        this.nombre = nombre;
+        this.coleccionId = coleccionId;
     }
 
     public ProductoId getProductoId() {
@@ -41,5 +43,13 @@ public class AgregarProducto extends Command {
 
     public Categoria getCategoria() {
         return categoria;
+    }
+
+    public Nombre getNombre() {
+        return nombre;
+    }
+
+    public ColeccionId getColeccionId() {
+        return coleccionId;
     }
 }
