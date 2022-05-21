@@ -1,4 +1,4 @@
-package co.com.sofkau.retoDDD.producion.coleccion;
+package co.com.sofkau.retoDDD.producion.fabrica;
 
 import co.com.sofka.business.generic.UseCaseHandler;
 import co.com.sofka.business.repository.DomainEventRepository;
@@ -6,12 +6,12 @@ import co.com.sofka.business.support.RequestCommand;
 import co.com.sofka.domain.generic.DomainEvent;
 import co.com.sofkau.retoDDD.generic.values.Fecha;
 import co.com.sofkau.retoDDD.generic.values.Nombre;
-import co.com.sofkau.retoDDD.generic.values.Telefono;
-import co.com.sofkau.retoDDD.producion.coleccion.commands.AgregarPersonal;
+import co.com.sofkau.retoDDD.generic.values.Tipo;
 import co.com.sofkau.retoDDD.producion.coleccion.events.ColeccionCreada;
-import co.com.sofkau.retoDDD.producion.coleccion.events.PersonalAgregado;
-import co.com.sofkau.retoDDD.producion.coleccion.values.ColeccionId;
-import co.com.sofkau.retoDDD.producion.coleccion.values.PersonalId;
+import co.com.sofkau.retoDDD.producion.fabrica.commands.AgregarInsumo;
+import co.com.sofkau.retoDDD.producion.fabrica.events.InsumoAgregado;
+import co.com.sofkau.retoDDD.producion.fabrica.values.FabricaId;
+import co.com.sofkau.retoDDD.producion.fabrica.values.InsumoId;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -26,38 +26,36 @@ import java.util.List;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
-class AgregarPersonalUseCaseTest {
+class AgregarInsumoUseCaseTest {
 
     @InjectMocks
-    private AgregarPersonalUseCase useCase;
+    private AgregarInsumoUseCase useCase;
 
     @Mock
     private DomainEventRepository repository;
 
     @Test
-    void agregarPersonalHappyPass() {
+    void agregarInsumoHappyPass() {
         //arrange
-        ColeccionId coleccionId = ColeccionId.of("DDD");
-        PersonalId personalId = PersonalId.of("ddd");
-        Nombre nombre = new Nombre("Aura");
-        Telefono telefon = new Telefono("321456");
-        var command = new AgregarPersonal(coleccionId, personalId, nombre, telefon);
+        FabricaId fabricaId = FabricaId.of("Fabrica01");
+        InsumoId insumoId = InsumoId.of("Insumo01");
+        Tipo tipo = new Tipo("Materiales Sastreria");
+        var command = new AgregarInsumo(fabricaId, insumoId, tipo);
 
-        when(repository.getEventsBy("DDD")).thenReturn(storedEvents());
+        when(repository.getEventsBy("Fabrica01")).thenReturn(storedEvents());
         useCase.addRepository(repository);
 
         //act
         var events= UseCaseHandler.getInstance()
-                .setIdentifyExecutor(command.getColeccionId().value())
+                .setIdentifyExecutor(command.getFabricaId().value())
                 .syncExecutor(useCase, new RequestCommand<>(command))
                 .orElseThrow()
                 .getDomainEvents();
 
         //assert
-        var event = (PersonalAgregado)events.get(0);
-        Assertions.assertEquals("Aura", event.getNombre().value());
-        Assertions.assertEquals("321456", event.getTelefono().value());
-        Assertions.assertEquals("DDD", event.aggregateRootId());
+        var event = (InsumoAgregado)events.get(0);
+        Assertions.assertEquals("Materiales Sastreria", event.getTipo().value());
+        Assertions.assertEquals("Fabrica01", event.aggregateRootId());
 
     }
 
@@ -68,10 +66,9 @@ class AgregarPersonalUseCaseTest {
                 nombre,
                 fecha
         );
-        event.setAggregateRootId("DDD");
+        event.setAggregateRootId("Fabrica01");
         return List.of(event);
     }
 
 
 }
-

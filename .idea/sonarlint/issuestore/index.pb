@@ -1,10 +1,6 @@
 
 Å
 Qdomain/src/main/java/co/com/sofkau/retoDDD/producion/fabrica/values/Cantidad.java,3\c\3c9d86549526c5f847cdbbe6360ddacccc58ae43
-Ç
-Rdomain/src/main/java/co/com/sofkau/retoDDD/producion/fabrica/values/FabricaId.java,2\0\2077949daab363eb80fe8b90ad5c5fd4e28a35e8
-Å
-Qdomain/src/main/java/co/com/sofkau/retoDDD/producion/fabrica/values/InsumoId.java,7\8\780070ed4df4a9ab59a734671f0dcd8970d32b81
 Ö
 Udomain/src/main/java/co/com/sofkau/retoDDD/producion/fabrica/values/MaquinariaId.java,a\7\a72fa782349cc38a0820e19fefbd2b63b2008ad5
 Ä
@@ -21,22 +17,16 @@ Ndomain/src/main/java/co/com/sofkau/retoDDD/producion/fabrica/values/Forma.java
 Pdomain/src/main/java/co/com/sofkau/retoDDD/producion/taller/values/BocetoId.java,4\f\4fc7c8c9ca60493881adfc6d027357968d100a8f
 É
 Sdomain/src/main/java/co/com/sofkau/retoDDD/producion/taller/values/DisenadorId.java,d\2\d2a14386fdba2fce3b331140262de2e7813f6041
-Ä
-Pdomain/src/main/java/co/com/sofkau/retoDDD/producion/taller/values/TallerId.java,9\5\956daee35370d279a6c03039bf3ebf25d7d4354a
 Ç
 Rdomain/src/main/java/co/com/sofkau/retoDDD/producion/taller/values/UtileriaId.java,b\a\baa6ac0755acb131e0ade825f22409b734fb6251
 7
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
-á
-Wbusiness/src/main/java/co/com/sofkau/retoDDD/producion/fabrica/CrearFabricaUseCase.java,5\b\5b401ce5f66a17e30a623e4058093193ef6fa8ef
 x
 Hdomain/src/main/java/co/com/sofkau/retoDDD/generic/values/Direccion.java,c\a\ca196cf4ebc11b88661d4abe6faa1af87f033b3b
 v
 Fdomain/src/main/java/co/com/sofkau/retoDDD/generic/values/Medidas.java,b\8\b8fa225fab1c1e1eea7f18ab1cb8ea52e5518beb
 s
 Cdomain/src/main/java/co/com/sofkau/retoDDD/generic/values/Tipo.java,d\6\d67e701b3570cd654e51368647c8cd1079655881
-Ö
-Ubusiness/src/main/java/co/com/sofkau/retoDDD/producion/taller/CrearTallerUseCase.java,b\4\b48d3c9b01d3961cfc4a6e04046c9a3acee01428
 Ñ
 Tdomain/src/main/java/co/com/sofkau/retoDDD/producion/coleccion/entitys/Producto.java,c\7\c74ba021eb16a8dff8a07cc12b5cef6a3611c25f
 à
@@ -45,8 +35,6 @@ Xdomain/src/main/java/co/com/sofkau/retoDDD/producion/coleccion/ColeccionEventCh
 Rdomain/src/main/java/co/com/sofkau/retoDDD/producion/coleccion/entitys/Prueba.java,1\8\18cf4cedc7bf3a04e47d259fce0f42512dc11222
 Ñ
 Tdomain/src/main/java/co/com/sofkau/retoDDD/producion/coleccion/values/Categoria.java,f\f\ff3e56f8199a83da78a64661f42b308b47d8c6cf
-à
-Xdomain/src/main/java/co/com/sofkau/retoDDD/producion/fabrica/commands/AgregarInsumo.java,f\2\f229fb124f7cf3271cd1009dc2a146e9e8e846f0
 å
 \domain/src/main/java/co/com/sofkau/retoDDD/producion/fabrica/commands/AgregarMaquinaria.java,3\4\349b91ea83a3760fc8cea2f311aa4c865d47f795
 á
@@ -55,8 +43,6 @@ Wdomain/src/main/java/co/com/sofkau/retoDDD/producion/fabrica/commands/AgregarMo
 Wdomain/src/main/java/co/com/sofkau/retoDDD/producion/fabrica/commands/CrearFabrica.java,7\2\72377509903cec8e307e9c8142ba2de803798c54
 Ñ
 Tdomain/src/main/java/co/com/sofkau/retoDDD/producion/fabrica/FabricaEventChange.java,f\6\f65e08805c4e09111d652deae393fe82b0a3b612
-y
-Idomain/src/main/java/co/com/sofkau/retoDDD/producion/fabrica/Fabrica.java,a\c\acc7a2ce92cc8f5e5961d50cac511e7e39691362
 
 Odomain/src/main/java/co/com/sofkau/retoDDD/producion/fabrica/entitys/Molde.java,d\0\d0441b9c3e5a8fcc3b749814961052c0a03e814b
 Ñ
@@ -69,8 +55,6 @@ Zdomain/src/main/java/co/com/sofkau/retoDDD/producion/taller/commands/AgregarDis
 Ydomain/src/main/java/co/com/sofkau/retoDDD/producion/taller/commands/AgregarUtileria.java,2\1\219419ec8689ce1aef85c4fca31b1397de451821
 Ö
 Udomain/src/main/java/co/com/sofkau/retoDDD/producion/taller/commands/CrearBoceto.java,3\5\359a1143dbac487ca3618b9c704a890e85db20df
-Ö
-Udomain/src/main/java/co/com/sofkau/retoDDD/producion/taller/commands/CrearTaller.java,6\4\64b62312d58bea4e26abc050ff9f7320d2502fd1
 Ç
 Rdomain/src/main/java/co/com/sofkau/retoDDD/producion/taller/TallerEventChange.java,d\7\d79328310b0bd2e2c9064f2f33cb663cd5e8c0cc
 w

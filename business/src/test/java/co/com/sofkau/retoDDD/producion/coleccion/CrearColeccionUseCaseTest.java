@@ -15,14 +15,6 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 
 
-/**
- * Caso de uso Crear Coleccion
- *
- * @author Aura russil
- * @version 1.0.0
- * @since 1.0.0
- */
-
 class CrearColeccionUseCaseTest {
 
     private CrearColeccionUseCase useCase;
@@ -36,7 +28,7 @@ class CrearColeccionUseCaseTest {
     void crearColeccionHappyPass() {
         //arrange
         ColeccionId coleccionId = ColeccionId.of("DDD");
-        Nombre nombre = new Nombre("DDD");
+        Nombre nombre = new Nombre("Colecion de Verano");
         Fecha fecha = new Fecha(LocalTime.now(), LocalDate.now());
         var command = new CrearColeccion(coleccionId, nombre, fecha);
 
@@ -46,7 +38,7 @@ class CrearColeccionUseCaseTest {
         //asserts
         var coleccionCreada = (ColeccionCreada)events.get(0);
         Assertions.assertEquals("DDD", coleccionCreada.aggregateRootId());
-        Assertions.assertEquals("DDD", coleccionCreada.getNombre().value());
+        Assertions.assertEquals("Colecion de Verano", coleccionCreada.getNombre().value());
         Assertions.assertEquals(fecha, coleccionCreada.getFecha());
 
 

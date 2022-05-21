@@ -25,10 +25,10 @@ public class Coleccion extends AggregateEvent<ColeccionId> {
     /**
      * Constructor del Agregado Colección.
      *
-     * @param entityId the entity id
+     * @param coleccionId the entity id
      */
-    public Coleccion(ColeccionId entityId, Nombre nombre, Fecha fecha) {
-        super(entityId);
+    public Coleccion(ColeccionId coleccionId, Nombre nombre, Fecha fecha) {
+        super(coleccionId);
         appendChange(new ColeccionCreada(nombre, fecha)).apply();
         subscribe(new ColeccionEventChange(this));
     }

@@ -55,6 +55,9 @@ class AgregarProductoUseCaseTest {
         //assert
         var event = (ProductoAgregado)events.get(0);
         Assertions.assertEquals("Camisa", event.getNombre().value());
+        Assertions.assertEquals("S", event.getTalla().value());
+        Assertions.assertEquals("Azul", event.getColor().value());
+        Assertions.assertEquals("Mujer", event.getCategoria().value());
     }
 
     private List<DomainEvent> history() {

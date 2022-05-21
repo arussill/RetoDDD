@@ -12,7 +12,7 @@ public class PersonalId extends Identity {
 
     }
 
-    public static PersonalId of(String value) {
-        return new PersonalId(value);
+    public static PersonalId of(String id) {
+        return new PersonalId(id);
     }
 }
