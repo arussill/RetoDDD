@@ -21,6 +21,7 @@ public class CrearTaller extends Command {
     private final Direccion direccion;
     private final Telefono telefono;
 
+
     public CrearTaller(TallerId tallerId, Nombre nombre, Direccion direccion, Telefono telefono) {
         this.tallerId = tallerId;
         this.nombre = nombre;

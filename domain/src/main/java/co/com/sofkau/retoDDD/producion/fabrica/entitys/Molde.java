@@ -29,12 +29,4 @@ public class Molde extends Entity<MoldeId> {
         this.cantidad = cantidad;
     }
 
-    public void cambiarDetalles(MoldeId moldeId, Forma forma, Medidas medidas, Cantidad cantidad){
-        if(moldeId == this.moldeId){
-            this.moldeId = moldeId;
-            this.forma = forma;
-            this.medidas = medidas;
-            this.cantidad = cantidad;
-        }
-    }
 }

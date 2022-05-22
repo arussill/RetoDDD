@@ -9,18 +9,19 @@ import co.com.sofkau.retoDDD.producion.coleccion.entitys.Personal;
 import co.com.sofkau.retoDDD.producion.coleccion.entitys.Producto;
 import co.com.sofkau.retoDDD.producion.coleccion.entitys.Prueba;
 import co.com.sofkau.retoDDD.producion.coleccion.events.*;
-import co.com.sofkau.retoDDD.producion.coleccion.values.*;;
+import co.com.sofkau.retoDDD.producion.coleccion.values.*;
 
 
 import java.util.List;
 
 public class Coleccion extends AggregateEvent<ColeccionId> {
-
+    protected ColeccionId coleccionId;
     protected Nombre nombre;
     protected Fecha fecha;
     protected Prueba prueba;
     protected Personal personal;
     protected Producto producto;
+    protected EstadoDeColeccion estadoDeColeccion;
 
     /**
      * Constructor del Agregado Colección.
@@ -61,8 +62,17 @@ public class Coleccion extends AggregateEvent<ColeccionId> {
         appendChange(new ProductoAgregado(porductoId, nombre, color, talla, categoria)).apply();
     }
 
-    public void cambiarPersonal(PersonalId personalId, Nombre nombre, Telefono telefono){
-        appendChange(new PersonalCambiado(personalId,nombre,telefono)).apply();
+    public void cambiarPersonal(Nombre nombre, Telefono telefono){
+        appendChange(new PersonalCambiado(nombre,telefono)).apply();
+    }
+
+    public void finalizarColecion(Fecha fecha, Resultado resultado){
+        appendChange(new ColeccionFinalizada( resultado, coleccionId, fecha)).apply();
+    }
+
+
+    public void cambioDeColecion(Nombre nombre, Telefono telefono){
+        appendChange(new ColeccionCambiada( coleccionId, nombre, telefono)).apply();
     }
 
     //Propiedades

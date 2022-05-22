@@ -13,9 +13,6 @@ public class FabricaEventChange extends EventChange {
             fabrica.nombre = event.getNombre();
             fabrica.direccion = event.getDireccion();
             fabrica.telefono = event.getTelefono();
-            fabrica.maquinaria = null;
-            fabrica.insumo = null;
-
         });
 
         apply((MoldeCreado event)->{
@@ -34,14 +31,5 @@ public class FabricaEventChange extends EventChange {
             fabrica.insumo= new Insumo(insumoId, event.getTipo());
         });
 
-        apply((DetallesDelMoldeCambiados event)->{
-            var moldeId = event.getMentoriaId();
-            var forma = event.getForma();
-            var tamano = event.getTamano();
-            var cantidad = event.getCantidad();
-            fabrica.listaDeMoldes.forEach(molde->{
-                molde.cambiarDetalles(moldeId, forma, tamano, cantidad);
-            });
-        });
     }
 }
